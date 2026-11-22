@@ -7,7 +7,7 @@ function Header({ cartCount, page, setPage }) {
       </button>
       <nav className="nav-links" aria-label="Main navigation">
         <button className={page === 'shop' ? 'active' : ''} onClick={() => setPage('shop')}>Shop</button>
-        <button onClick={() => setPage('cart')}>Categories</button>
+        <button onClick={() => setPage('cart')}>Cart</button>
         <button onClick={() => setPage('cart')}>Deals</button>
       </nav>
       <button className="cart-button" onClick={() => setPage('cart')} aria-label="View cart">
