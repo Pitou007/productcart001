@@ -54,13 +54,19 @@ function App() {
   function updateQuantity(id, amount) {
     const updatedCart = cart.map((item) => {
       if (item.id === id) {
-        return { ...item, quantity: item.quantity + amount }
+        let newQuantity = item.quantity + amount
+
+        if (newQuantity < 1) {
+          newQuantity = 1
+        }
+
+        return { ...item, quantity: newQuantity }
       }
 
       return item
     })
 
-    setCart(updatedCart.filter((item) => item.quantity > 0))
+    setCart(updatedCart)
   }
 
   function removeItem(id) {

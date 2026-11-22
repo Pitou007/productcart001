@@ -30,7 +30,13 @@ function Cart({ cart, cartCount, subtotal, grandTotal, shippingCost, updateQuant
                   <p>{money(item.price)}</p>
                 </div>
                 <div className="quantity-control">
-                  <button onClick={() => updateQuantity(item.id, -1)} aria-label={`Decrease ${item.name} quantity`}>−</button>
+                  <button
+                    onClick={() => updateQuantity(item.id, -1)}
+                    disabled={item.quantity === 1}
+                    aria-label={`Decrease ${item.name} quantity`}
+                  >
+                    −
+                  </button>
                   <span>{item.quantity}</span>
                   <button onClick={() => updateQuantity(item.id, 1)} aria-label={`Increase ${item.name} quantity`}>+</button>
                 </div>

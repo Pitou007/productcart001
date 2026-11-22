@@ -44,6 +44,7 @@
 .cart-item-details p:last-child { margin: 0; color: #77737e; font-size: 13px; }
 .quantity-control { height: 38px; width: 112px; display: grid; grid-template-columns: 36px 40px 36px; align-items: center; border: 1px solid #e5e3e8; border-radius: 8px; text-align: center; }
 .quantity-control button { height: 36px; border: 0; background: none; color: #77737e; font-size: 18px; }
+.quantity-control button:disabled { color: #c9c6ce; cursor: not-allowed; }
 .quantity-control span { font-size: 13px; font-weight: 750; }
 .line-total { text-align: right; font-size: 14px; }
 .remove-button { border: 0; background: none; width: 34px; height: 34px; display: grid; place-items: center; }
